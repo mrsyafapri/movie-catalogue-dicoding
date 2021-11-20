@@ -10,19 +10,16 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
-    ],
+    rules: [{
+      test: /\.css$/,
+      use: [{
+          loader: 'style-loader',
+        },
+        {
+          loader: 'css-loader',
+        },
+      ],
+    }],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,12 +27,10 @@ module.exports = {
       filename: 'index.html',
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
-        },
-      ],
+      patterns: [{
+        from: path.resolve(__dirname, 'src/public/'),
+        to: path.resolve(__dirname, 'dist/'),
+      }],
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),

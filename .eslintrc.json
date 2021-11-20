@@ -28,7 +28,9 @@
         "no-new": 0,
         "no-plusplus": 0,
         "no-await-in-loop": 0,
-        "eol-last": 0
+        "eol-last": 0,
+        "indent": 0,
+        "array-bracket-spacing": 0
     },
     "plugins": ["jasmine", "codeceptjs"]
 }
